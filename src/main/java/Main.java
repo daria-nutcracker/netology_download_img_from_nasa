@@ -4,12 +4,18 @@ import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
+import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
 
 public class Main {
-    //Наша ссылка, на которую будем отправлять запрос
+    public static void main(String[] args) throws TelegramApiException {
+        new MyTelegramBot();
+    }
+}
+
+/*   //Наша ссылка, на которую будем отправлять запрос
     public static final String URI = "https://api.nasa.gov/planetary/apod?api_key=ahIAAEbbk2QJBmUQdPzn9R1axadqFLj9FUi8lMme";
 
     //Сущность, которая будет преобразовывать ответ в наш объект NASA
@@ -35,5 +41,4 @@ public class Main {
         FileOutputStream fos = new FileOutputStream(fileName);
         entity.writeTo(fos);
         fos.close();
-    }
-}
+    }*/
